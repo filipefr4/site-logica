@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercícios | Lógica Proposicional</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/quiz.js"></script>
+</head>
+<body>
+<nav>
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="historia.html">História</a></li>
+      <li><a href="proposicoes.html">Proposições</a></li>
+      <li><a href="conectivos.html">Conectivos</a></li>
+      <li><a href="tabela-verdade.html">Tabela-Verdade</a></li>
+      <li><a href="exercicios.html">Exercícios</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+</nav>
+
+<h2>Exercícios</h2>
+
+<form id="quizForm">
+<div class="pergunta">
+  <p><strong>1 -</strong> Determine a negação da proposição: “Pedro viaja e Ana estuda”.</p>
+
+ 
+    <label><input type="radio" name="q1" value="a"> a) Pedro viaja ou Ana estuda.</label><br>
+    <label><input type="radio" name="q1" value="b"> b) Pedro não viaja e Ana estuda.</label><br>
+    <label><input type="radio" name="q1" value="c"> c) Pedro não viaja ou Ana estuda.</label><br>
+    <label><input type="radio" name="q1" value="d"> d) Pedro não viaja ou Ana não estuda.</label><br>
+    <label><input type="radio" name="q1" value="e"> e) Ana não estuda e Pedro viaja.</label><br>
+</div>
+
+<div class="pergunta">
+  <p><strong>2 -</strong>  Considerando a proposição composta (p∧¬q)→r, é correto afirmar que:</p>
+
+  
+    <label><input type="radio" name="q2" value="a"> a) a proposição composta é falsa apenas se p for verdadeira e q for falsa.</label><br>
+    <label><input type="radio" name="q2" value="b"> b) a proposição composta é verdadeira apenas se r for verdadeira.</label><br>
+    <label><input type="radio" name="q2" value="c"> c) para a proposição composta ser falsa, é necessário que p seja verdadeiro, q seja falso e r, seja falso.</label><br>
+    <label><input type="radio" name="q2" value="d"> d) a proposição composta é verdadeira apenas se p e r forem verdadeiros.</label><br>
+    <label><input type="radio" name="q2" value="e"> e) para que a proposição composta seja verdadeira, é necessário que ppp seja falso.</label><br>
+</div>
+
+<div class="pergunta">
+  <p><strong>3 -</strong> A tabela-verdade para a fórmula p→(q∨r) é mostrada abaixo. Complete a tabela e determine a situação em que a proposição é falsa.</p>
+  <img src="../images/tabela.png" alt="">
+
+
+    <label><input type="radio" name="q3" value="a"> a) A proposição é falsa apenas quando P é verdadeiro e tanto Q quanto R são falsos.</label><br>
+    <label><input type="radio" name="q3" value="b"> b) A proposição é uma tautologia, ou seja, sempre verdadeira.</label><br>
+    <label><input type="radio" name="q3" value="c"> c) A proposição é uma contradição, ou seja, sempre falsa.</label><br>
+    <label><input type="radio" name="q3" value="d"> d) A proposição é falsa apenas quando todos os valores são verdadeiros.</label><br>
+    <label><input type="radio" name="q3" value="e"> e) A proposição é falsa quando P é falso e Q é verdadeiro.</label><br>
+
+
+</div>
+
+<div class="pergunta">
+  <p><strong>4 -</strong><p> Considere as proposições:
+<p>𝑝: “João estudou para a prova.”</p>
+<p>𝑞: “João passou na prova.”</p>
+<p>Analise a seguinte sentença em lógica proposicional: p→q</p>
+<p>Qual das alternativas abaixo representa corretamente o significado dessa sentença?</p></p>
+    
+
+
+    <label><input type="radio" name="q4" value="a"> a) Se João estudou para a prova, então ele passou na prova.</label><br>
+    <label><input type="radio" name="q4" value="b"> b) João passou na prova ou estudou para a prova..</label><br>
+    <label><input type="radio" name="q4" value="c"> c) Se João passou na prova, então ele estudou para a prova.</label><br>
+    <label><input type="radio" name="q4" value="d"> d) João não estudou para a prova e não passou na prova.</label><br>
+    <label><input type="radio" name="q4" value="e"> e) João passou na prova se, e somente se, ele estudou para a prova.</label><br>
+  </form>
+</div>
+
+<button id="verificarTudo" onclick="verificarTodas()" style="display: none;">Verificar tudo</button>
+
+</body>
+</html>

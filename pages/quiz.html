@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz de Lógica Proposicional</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .conteudo-central {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2em;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #0a2940;
+    }
+
+    button {
+      background: linear-gradient(135deg, #4CAF50, #2e7d32);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #43a047, #1b5e20);
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="historia.html">História</a></li>
+      <li><a href="proposicoes.html">Proposições</a></li>
+      <li><a href="conectivos.html">Conectivos</a></li>
+      <li><a href="tabela-verdade.html">Tabela-Verdade</a></li>
+      <li><a href="exercicios.html">Exercícios</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <div class="conteudo-central">
+    <h1>Quiz de Lógica Proposicional</h1>
+    <button onclick="iniciarQuiz()">Começar Quiz</button>
+  </div>
+
+  <script>
+    const perguntas = [
+      {
+        texto: '1. Qual é o valor lógico de p ∧ q se p = V e q = F?',
+        opcoes: {
+          'V': 'Verdadeiro',
+          'F': 'Falso'
+        },
+        correta: 'F'
+      },
+      {
+        texto: '2. Qual é o valor lógico de p ∨ q se p = F e q = F?',
+        opcoes: {
+          'V': 'Verdadeiro',
+          'F': 'Falso'
+        },
+        correta: 'F'
+      },
+      {
+        texto: '3. Qual é o valor lógico de ¬p se p = F?',
+        opcoes: {
+          'V': 'Verdadeiro',
+          'F': 'Falso'
+        },
+        correta: 'V'
+      },
+      {
+        texto: '4. Qual é o valor lógico de p → q se p = V e q = F?',
+        opcoes: {
+          'V': 'Verdadeiro',
+          'F': 'Falso'
+        },
+        correta: 'F'
+      },
+      {
+        texto: '5. Qual é o valor lógico de ¬(p ∨ q) se p = F e q = V?',
+        opcoes: {
+          'V': 'Verdadeiro',
+          'F': 'Falso'
+        },
+        correta: 'F'
+      }
+    ];
+
+    let pontuacao = 0;
+    let indice = 0;
+
+    function iniciarQuiz() {
+      pontuacao = 0;
+      indice = 0;
+      mostrarPergunta();
+    }
+
+    function mostrarPergunta() {
+      if (indice >= perguntas.length) {
+        Swal.fire({
+          title: 'Quiz finalizado!',
+          text: `Você acertou ${pontuacao} de ${perguntas.length} questões.`,
+          icon: 'success'
+        });
+        return;
+      }
+
+      const atual = perguntas[indice];
+
+      Swal.fire({
+        title: atual.texto,
+        input: 'radio',
+        inputOptions: atual.opcoes,
+        inputValidator: (value) => {
+          if (!value) {
+            return 'Selecione uma resposta!';
+          }
+        }
+      }).then((resposta) => {
+        if (resposta.isConfirmed) {
+          if (resposta.value === atual.correta) {
+            pontuacao++;
+            Swal.fire('✅ Correto!', '', 'success').then(() => {
+              indice++;
+              mostrarPergunta();
+            });
+          } else {
+            Swal.fire('❌ Errado!', `A resposta correta era: ${atual.opcoes[atual.correta]}`, 'error').then(() => {
+              indice++;
+              mostrarPergunta();
+            });
+          }
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

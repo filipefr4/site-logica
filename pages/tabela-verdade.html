@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela-verdade | Lógica Proposicional</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
+</head>
+<body>
+<nav>
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="historia.html">História</a></li>
+      <li><a href="proposicoes.html">Proposições</a></li>
+      <li><a href="conectivos.html">Conectivos</a></li>
+      <li><a href="tabela-verdade.html">Tabela-Verdade</a></li>
+      <li><a href="exercicios.html">Exercícios</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+</nav>
+<h2>Tabela-Verdade</h2>
+<p>A tabela verdade é uma ferramenta usada no estudo da lógica matemática para determinar se uma proposição é verdadeira ou falsa. Basicamente, ela ajuda a avaliar o valor lógico de uma sentença.
+<p>Em lógica, as proposições são frases que expressam pensamentos completos, como afirmações de fatos ou ideias.</p>
+<p>A tabela verdade é especialmente útil para analisar proposições compostas, formadas por combinações de proposições simples. O valor lógico de uma proposição composta depende do valor de cada uma das proposições que a compõem.</p>
+<p>Para combinar essas proposições simples e criar proposições compostas, utilizamos conectivos lógicos, sendo símbolos que representam operações lógicas.</p>
+<p>Abaixo, você verá as tabelas-verdades correspondentes aos conectivos lógicos</p>
+
+<div><h3>Negação(~ ou ¬)</h3>
+<table border="1" id="tabelaverdade">
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>~p</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+    </tr>
+        <tr>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div><h3>Conjunção(∧)</h3>
+<table border="1" id="tabelaverdade">
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p ∧ q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div><h3>Disjunção(∨)</h3>
+<table border="1" id="tabelaverdade">
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p ∨ q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div><h3>Condição(→)</h3>
+  <table border="1" id="tabelaverdade">
+    <thead>
+      <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>p → q</th>
+      </tr>
+    </thead>
+<tbody>
+   <tr>
+      <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    </tr>
+</tbody>
+  </table>
+</div>
+
+<div><h3>Bicondicional(↔)</h3>
+<table border="1" id="tabelaverdade">
+  <thead>
+    <tr>
+      <th>p</th>
+      <th>q</th>
+      <th>p ↔ q</th>
+    </tr>
+  </thead>
+<tbody>
+   <tr>
+      <tr>
+      <td>V</td>
+      <td>V</td>
+      <td>V</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>V</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>V</td>
+    </tr>
+    </tr>
+</tbody>
+</table>
+</div>
+
+</body>
+</html>
